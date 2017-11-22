@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.mio.administrar.entity.Persona;
 import com.mio.administrar.repository.PersonaRepository;
 
@@ -108,5 +107,5 @@ public class PersonaController {
 		personaRepository.delete(p);
         return "Eliminado correctamente";
     }
-	
+		
 }
