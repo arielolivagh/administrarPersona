@@ -38,7 +38,7 @@ public class PersonaController {
 	 * @return Lista de personas
 	 */
 	@RequestMapping(method=RequestMethod.GET,produces={"application/json"})
-	public Iterable<Persona> readPersonaById() {
+	public Iterable<Persona> readPersonas() {
         return personaRepository.findAll();
     }
 	
@@ -49,7 +49,7 @@ public class PersonaController {
 	 */
 	@RequestMapping(value="/{id}",method=RequestMethod.GET,produces={"application/json"})
 	public Persona readPersona(@PathVariable("id") int id) {
-        return personaRepository.findPersona(id);
+        return personaRepository.findPersonaById(id);
     }
 	
 	/**
